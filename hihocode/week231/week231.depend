@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1543846980 source:/home/sinfonia/acm/hihocode/week231/main.c
+	<stdio.h>
+	<stdlib.h>
+
