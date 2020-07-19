@@ -4,4 +4,5 @@ bin/
 *.depend
 *.layout
 obj/
+tags
 
