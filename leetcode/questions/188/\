@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <iostream>
+#include <vector>
+#include <math.h>
+
+using namespace std;
+
+int solve(int k, vector<int>& prices)
+{
+	int buy[1005][505];
+	int sell[1005][505];
+	int size = prices.size();
+	k = max(k, size/2);
+	int ret = 0;
+
+	for (int i = 0; i < k; i++) {
+		buy[0][i] = -prices[0];
+		sell[0][i] = 0;
+	}
+
+	for (int i = 0; i < size; i++) {
+		for (int j = 1; j < k; j++) {
+			buy[i][j] = max(buy[i-1][j], sell[i-1][j] - prices[i]);
+			sell[i][j] = max(sell[i-1][j], buy[i-1][j] + prices[i]);
+			ret = max(ret, sell[i][j]);
+		}
+	}
+
+	return ret;
+}
+
+int main(void)
+{
+	vector<int> prices = {2,4,1};
+	int k = 2;
+	int ret = solve(k, prices);
+	cout << ret << endl;
+	return 0;
+}
