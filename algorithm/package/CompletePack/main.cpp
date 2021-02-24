@@ -19,8 +19,8 @@ void init(void)
 }
 
 /*
- * f(i, v): 前i件物品放在容量为v的背包中可获得的最大价值
- * f(i, v) = max(f(i-1, v), f(i-1,v-ci)+wi)
+ * f(i, v): 前i种物品放在容量为v的背包中可获得的最大价值，一种物品有多件
+ * f(i, v) = max(f(i-1, v), f(i,v-ci)+wi)
  * 时间复杂度: O(VN)
  * 空间复杂度: O(VN)
  */
@@ -30,7 +30,7 @@ void solve1(void)
 
 	for (int i = 1; i <= size; i++) {
 		for (int v = cost[i]; v <= volume; v++) {
-			f[i][v] = max(f[i-1][v], f[i-1][v-cost[i]] + worth[i]);
+			f[i][v] = max(f[i-1][v], f[i][v-cost[i]] + worth[i]);
 		}
 	}
 
@@ -46,7 +46,7 @@ void solve2(void)
 	int f[volume+1] = {0}; // 尽量装满
 
 	for (int i = 1; i <= size; i++) {
-		for (int v = volume; v >= cost[i]; v--) {
+		for (int v = cost[i]; v <= volume; v++) {
 			f[v] = max(f[v], f[v-cost[i]] + worth[i]);
 		}
 	}
@@ -55,11 +55,12 @@ void solve2(void)
 }
 
 /*
- * 抽象: 增加一件费用为 Cost，价值 Worth 的物品，更新不同容量最大价值
+ * 抽象: 增加一种费用为 Cost，价值 Worth 的物品，更新不同容量最大价值
+ * 理解：不选则是 f[i-1][v], 选择的情况此前可以已经选过
  */
-void zero_one_pack(int *f, int Cost, int Worth)
+void complete_pack(int *f, int Cost, int Worth)
 {
-	for (int v = volume; v >= Cost; v--) {
+	for (int v = Cost; v <= volume; v++) {
 		f[v] = max(f[v], f[v-Cost] + Worth);
 	}
 }
@@ -74,11 +75,15 @@ void solve3(void)
 	*/
 
 	for (int i = 1; i <= size; i++) {
-		zero_one_pack(f, cost[i], worth[i]);
+		complete_pack(f, cost[i], worth[i]);
 	}
 
 	cout << f[volume] << endl;
 }
+
+/*
+ * simple performance: 去掉cost[i] >= cost[j] && worth[i] <= worth[j] 的物品i
+ */
 
 int main(void)
 {
