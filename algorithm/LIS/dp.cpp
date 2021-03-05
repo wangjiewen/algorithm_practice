@@ -2,6 +2,11 @@
 
 using namespace std;
 
+/*
+ * O(n^2)
+ * dp[i]: 一定包括第 i 个数的前 i 个数，最长上升子序列有多长
+ * dp[i] = max(dp[i], dp[j]+1) 0 <= j < i && nums[j] < nums[i]
+ */
 class Solution {
 public:
 	int lengthOfLIS(vector<int>& nums) {
