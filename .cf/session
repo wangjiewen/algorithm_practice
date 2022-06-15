@@ -1,0 +1,75 @@
+{
+  "cookies": {
+    "codeforces.com": {
+      "codeforces.com;/;39ce7": {
+        "Name": "39ce7",
+        "Value": "CFL8sIyp",
+        "Domain": "codeforces.com",
+        "Path": "/",
+        "SameSite": "",
+        "Secure": false,
+        "HttpOnly": false,
+        "Persistent": true,
+        "HostOnly": true,
+        "Expires": "2022-06-24T11:06:22.132896747+08:00",
+        "Creation": "2022-06-12T21:19:42.132896747+08:00",
+        "LastAccess": "2022-06-15T00:51:14.448660073+08:00"
+      },
+      "codeforces.com;/;JSESSIONID": {
+        "Name": "JSESSIONID",
+        "Value": "178638A919A6D2E1AFD7DB0338103BC0-n1",
+        "Domain": "codeforces.com",
+        "Path": "/",
+        "SameSite": "",
+        "Secure": false,
+        "HttpOnly": true,
+        "Persistent": false,
+        "HostOnly": true,
+        "Expires": "9999-12-31T23:59:59Z",
+        "Creation": "2022-05-19T22:18:04.239357071+08:00",
+        "LastAccess": "2022-06-15T00:51:14.448660073+08:00"
+      },
+      "codeforces.com;/;X-User": {
+        "Name": "X-User",
+        "Value": "82228ef248ff25de1c603a3fb444ee1af1f90d2ff309d371f4b91c486932a1849a03cd9f8234e270",
+        "Domain": "codeforces.com",
+        "Path": "/",
+        "SameSite": "",
+        "Secure": false,
+        "HttpOnly": false,
+        "Persistent": true,
+        "HostOnly": true,
+        "Expires": "2022-06-18T22:18:04.669962823+08:00",
+        "Creation": "2022-05-19T22:18:04.669962823+08:00",
+        "LastAccess": "2022-06-15T00:51:14.448660073+08:00"
+      },
+      "codeforces.com;/;X-User-Sha1": {
+        "Name": "X-User-Sha1",
+        "Value": "9798dee73d034222a0258d871accf7f768308f02",
+        "Domain": "codeforces.com",
+        "Path": "/",
+        "SameSite": "",
+        "Secure": false,
+        "HttpOnly": false,
+        "Persistent": true,
+        "HostOnly": true,
+        "Expires": "2023-06-12T21:19:42.132896747+08:00",
+        "Creation": "2022-05-19T22:18:04.669962823+08:00",
+        "LastAccess": "2022-06-15T00:51:14.448660073+08:00"
+      }
+    }
+  },
+  "handle": "shengmaiyin",
+  "handle_or_email": "issinfonia@gmail.com",
+  "password": "b3f9c6fc1b758db3383e2a8ad58c0a3b5f417017068aecdf6ff066c43aeaead73278462993ba551a",
+  "ftaa": "llngzieyoh43e0133o",
+  "bfaa": "f1b3f18c715565b589b7823cda7448ce",
+  "last_submission": {
+    "problem_type": "contest",
+    "contest_id": "1692",
+    "group_id": "",
+    "problem_id": "d",
+    "submission_id": "160650880",
+    "RootPath": "/home/sinfonia/algorithm/cf/contest"
+  }
+}
